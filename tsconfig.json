@@ -18,6 +18,22 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "pretty": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "plugins": [
+      {
+        "transform": "ypescript-transform-paths"
+      },
+      {
+        "transfrom": "ypescript-transform-paths", "afterDeclarations": true
+      }
+    ],
+    "paths":{
+      "@global/*" : ["src/shared/globals/*"],
+      "@service/*" : ["src/shared/services/*"],
+      "@socket/*" : ["src/shared/sockets/*"],
+      "@worker/*" : ["src/shared/workers/*"],
+      "@root/*": ["src/*"]
+
+    }
   }
 }
